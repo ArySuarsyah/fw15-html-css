@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+
+    <link rel="stylesheet" href="/asset/style/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+
+<body>
+    <div class="container-signIn">
+        <section class="hero-container-signIn">
+            <img src="/asset/image-icon/face1.png" alt="face-1">
+            <img src="/asset//image-icon/face2.png" alt="face-2">
+        </section>
+        <section class="side-signIn">
+            <div class="header-side-brand-signIn">
+                <div class="brand-logo-container-signIn">
+                    <img src="/asset/image-icon/Fill 1.png" alt="logo">
+                    <span class="brand-name-signIn">
+                        We<span>tick</span>
+                    </span>
+                </div>
+            </div>
+            <div class="header-side-title-signIn">
+                <h3>Sign in</h3>
+                <span>
+                    Hi, Welcome back to Urticket!
+                </span>
+            </div>
+            <form class="form-wrap-signIn" action="" method="post">
+                <input type="text" name="userName" id="userName" placeholder="Username" required>
+                <input type="email" name="email" id="email" placeholder="Email" minlength="2" required>
+                <div class="input-password-container">
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+                    <i class="eye" data-feather="eye"></i>
+
+                </div>
+                <a href="">Forgot Password?</a>
+                <div>
+                    <a href="index.html">
+                        <button class="btn-primary-signIn" type="submit">Sign Up</button>
+                    </a>
+                </div>
+                <span>or sign in with</span>
+                <div class="logo-footer-signIn">
+                    <div class="google-logo-signIn">
+                        <img src="/asset/image-icon/google.png" alt="">
+                    </div>
+                    <div class="fb-logo-signIn">
+                        <img src="/asset/image-icon/fb-logo.png" alt="">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>
