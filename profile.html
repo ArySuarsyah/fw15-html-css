@@ -126,7 +126,7 @@
                 class="pt-[15em] px-[2em] md:pt-[3em] pb-10 md:rounded-t-[40px] bg-white md:rounded-[15px] relative">
                 <div
                     class="text-[#dedede] md:text-[#373A42] w-[80%] md:w-[100%] flex gap-[10%] text-[20px] font-semibold mb-[1em] absolute top-10 left-22 md:static lg:static">
-                    <div class="flex flex-row justify-between w-[150%]">
+                    <div class="text-[#373A42] flex flex-row justify-between w-[150%]">
                         <span>
                             Profile
                         </span>
@@ -190,14 +190,17 @@
                                 <option value="malaysia">Malaysia</option>
                             </select>
                         </div>
-                        <div class="flex flex-col items-center gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
+                        <div class="flex flex-col gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
                             <span>Birthday Date</span>
                             <div>
-                                <input class="h-[40px] p-5 outline-0 rounded-[15px]" type="date" name="birthday"
+                                <input class="h-[40px] md:p-5 outline-0 rounded-[15px]" type="date" name="birthday"
                                     id="birthday">
                                 <label for="birthday">Edit</label>
                             </div>
                         </div>
+                        <button class="w-full text-white h-12 md:h-[61px] md:w-[315px] rounded-[15px] bg-[#5ea196]">
+                        Save
+                        </button>
                     </div>
                     <div class=" md:bg-white md:mt-[2em] p-[2em] flex flex-col justify-center items-center gap-5">
                         <div
@@ -208,8 +211,10 @@
                                 <img src="/asset/image-icon/cam.png" alt="">
                             </div>
                         </div>
-                        <div class="flex flex-col gap-5">
-                            <button class="h-[40px] border-[1px] border-[#709e96] rounded-[10px]">Choose Photo</button>
+                        <div class="hidden md:flex flex-col gap-5">
+                            <button class="h-[40px] border-[1px] border-[#709e96] rounded-[10px]">
+                            Choose Photo
+                            </button>
                             <div class="flex flex-col gap-2">
                                 <span>Image size: max, 2 MB</span>
                                 <span>Image formats: .JPG, .JPEG, .PNG</span>
