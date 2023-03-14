@@ -36,16 +36,13 @@
             <form class="form-wrap-signIn" action="" method="post">
                 <input type="text" name="userName" id="userName" placeholder="Username" required>
                 <input type="email" name="email" id="email" placeholder="Email" minlength="2" required>
-                <div class="input-password-container">
-                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
-                    <i class="eye" data-feather="eye"></i>
-
+                <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+                <div class="show-hide">
+                    <i class="eyeIcon" data-feather="eye"></i>
                 </div>
                 <a href="/forgotPassword.html">Forgot Password?</a>
                 <div>
-                    <a href="index.html">
                         <button class="btn-primary-signIn" type="submit">Sign Up</button>
-                    </a>
                 </div>
                 <span>or sign in with</span>
                 <div class="logo-footer-signIn">
@@ -61,6 +58,32 @@
     </div>
     <script>
         feather.replace()
+
+
+
+
+        // Show Hide Password
+
+        const showHide = document.querySelector(".show-hide");
+        const passwordInput = document.querySelector("#password");
+        const eye = showHide.querySelector(".eyeIcon");
+
+        const buttonSignIn = document.querySelector('.btn-primary-signIn')
+
+        showHide.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eye.setAttribute("data-feather", "eye-off");
+            } else {
+                passwordInput.type = "password";
+                eye.setAttribute("data-feather", "eye");
+            }
+        });
+
+
+                buttonSignIn.addEventListener('click', function () {
+                        window.location.href = 'index.html';
+                    });
     </script>
 </body>
 

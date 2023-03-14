@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-<link rel="stylesheet" href="/asset/style/style.css">
+
+    <link rel="stylesheet" href="/asset/style/style.css">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 <body>
@@ -31,23 +35,108 @@
                 </span>
             </div>
             <form class="form-wrap-signUp" action="" method="post">
-                <input type="text" name="full-name" id="full-name" placeholder="Full Name" required>
+                <input type="text" name="full-name" id="full-name" placeholder="Full Name" minlength="2" required>
                 <input type="email" name="email" id="email" placeholder="Email" minlength="2" required>
                 <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
-                <input type="confirm-password" name="confirm-password" id="confirm-password"
-                    placeholder="Confirm password" minlength="8" required>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password"
+                    minlength="8" required>
+                <div class="show-hide-signUp1">
+                    <i class="eyeIconPassword" data-feather="eye"></i>
+                </div>
+                <div class="show-hide-signUp2">
+                    <i class="eyeIconConfirm" data-feather="eye"></i>
+                </div>
                 <div class="accept">
-                    <input type="checkbox" name="acceptCheckbox" id="acceptCheckbox">
+                    <input type="checkbox" name="acceptCheckbox" id="acceptCheckbox" disabled>
                     <label for="acceptCheckbox">Accept terms and condition</label>
                 </div>
-                <div>
-                    <a href="index.html">
-                        <button class="btn-primary-signUp" type="submit">Sign Up</button>
-                    </a>
-                </div>
+                <button class="btn-primary-signUp-disable" id="btnSignUp" type="submit" disabled>
+                    Sign Up
+                </button>
             </form>
         </section>
     </div>
+    <script>
+
+        feather.replace()
+
+
+
+
+        const showHidePassword = document.querySelector(".show-hide-signUp1");
+        const showHideConfirm = document.querySelector(".show-hide-signUp2");
+
+        const passwordInput = document.querySelector("#password");
+        const confirmPasswordInput = document.querySelector("#confirm-password");
+
+        const eyeIconPassword = document.querySelector(".eyeIconPassword");
+        const eyeIconConfirm = document.querySelector(".eyeIconConfirm");
+
+        const fullName = document.querySelector('#full-name');
+        const email = document.querySelector('#email');
+
+        const checkbox = document.getElementById('acceptCheckbox');
+        const buttonSignUp = document.getElementById('btnSignUp');
+
+
+        // show hide input password
+
+        showHidePassword.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIconPassword.setAttribute("data-feather", "eye-off");
+            } else {
+                passwordInput.type = "password";
+                eyeIconPassword.setAttribute("data-feather", "eye");
+            }
+        });
+
+        // show hide confirm password
+
+        showHideConfirm.addEventListener("click", function () {
+            if (confirmPasswordInput.type === "password") {
+                confirmPasswordInput.type = "text";
+                eyeIconConfirm.setAttribute("data-feather", "eye-off");
+            } else {
+                confirmPasswordInput.type = "password";
+                eyeIconConfirm.setAttribute("data-feather", "eye");
+            }
+        });
+
+
+        // form validation
+
+        const inputForm = function () {
+            if (fullName.value.length >= 2 && email.value !== "" && email.value.includes('@') && passwordInput.value !== "" && confirmPasswordInput.value.length == passwordInput.value.length) {
+                checkbox.disabled = false;
+            } else {
+                checkbox.disabled = true;
+            }
+        }
+
+
+        const formSubmit = document.querySelector('.form-wrap-signUp').addEventListener('input', inputForm);
+
+
+        checkbox.addEventListener('click', function () {
+            if (checkbox.checked === true) {
+                buttonSignUp.disabled = false;
+                buttonSignUp.className = "btn-primary-signUp";
+            } else {
+                buttonSignUp.disabled = true;
+                buttonSignUp.className = "btn-primary-signUp-disable";
+            }
+        });
+
+        buttonSignUp.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+
+
+
+
+
+    </script>
 </body>
 
 </html>

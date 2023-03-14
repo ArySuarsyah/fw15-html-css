@@ -73,6 +73,7 @@ main {
 }
 
 .form-wrap-signUp {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 38px;
@@ -109,13 +110,29 @@ input::placeholder {
     opacity: 0.6;
 }
 
+.show-hide-signUp1 {
+    position: absolute;
+    top: 10.3em;
+    right: 1em;
+    cursor: pointer;
+    height: 25px;
+}
+
+.show-hide-signUp2 {
+    position: absolute;
+    top: 14.9em;
+    right: 1em;
+    cursor: pointer;
+    height: 25px;
+}
+
 .btn-primary-signUp {
     height: 3.5em;
     width: 100%;
     border-radius: 16px;
     border: 0;
     margin: 1em 0;
-    background: #ADCCC7;
+    background: #5ea196;
     font-style: normal;
     font-weight: 700;
     font-size: 1em;
@@ -127,14 +144,40 @@ input::placeholder {
     color: #F7F7FC;
 }
 
+.btn-primary-signUp-disable {
+    height: 3.5em;
+    width: 100%;
+    border-radius: 16px;
+    border: 0;
+    margin: 1em 0;
+    background: #b4d0cc;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.75px;
+    color: #F7F7FC;
+}
+
 .btn-primary-signUp:hover {
-    background: #779f98;
+    background: #377065;
 }
 
 .btn-primary-signUp:active {
-    background: #49706a;
+    background: #25584e;
 }
 
+.btn-primary-signUp a {
+    text-decoration: none;
+    color: #dedede;
+}
+
+.btn-primary-signUp-disable a {
+    text-decoration: none;
+    color: #dedede;
+}
 
 
 
@@ -208,6 +251,7 @@ input::placeholder {
 }
 
 .form-wrap-signIn {
+    position:relative;
     display: flex;
     flex-direction: column;
     margin-top: 38px;
@@ -238,11 +282,12 @@ input::placeholder {
     position: relative;
 }
 
-.eye {
+.show-hide {
     position: absolute;
-    top: 1em;
+    top: 10.5em;
     right: 1em;
     cursor: pointer;
+    height: 25px;
 }
 
 .form-wrap-signIn a {
@@ -1844,10 +1889,11 @@ footer {
         width: 90vw;
     }
 
-    .accept {
-        justify-content: start;
-        align-items: start;
-    }
+.accept input {
+    width: auto;
+}
+
+
 
 
 
@@ -1923,11 +1969,6 @@ footer {
     }
 
 
-    /* .location-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-    } */
 
 
     .location-grid h1 {
