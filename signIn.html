@@ -42,7 +42,7 @@
                 </div>
                 <a href="/forgotPassword.html">Forgot Password?</a>
                 <div>
-                        <button class="btn-primary-signIn" type="submit">Sign Up</button>
+                    <button class="btn-primary-signIn" type="submit">Sign Up</button>
                 </div>
                 <span>or sign in with</span>
                 <div class="logo-footer-signIn">
@@ -68,6 +68,12 @@
         const passwordInput = document.querySelector("#password");
         const eye = showHide.querySelector(".eyeIcon");
 
+        const userName = document.querySelector("#userName");
+        const email = document.querySelector("#email");
+        const password = document.querySelector('#password');
+
+        const formLogin = document.querySelector('.form-wrap-signIn')
+
         const buttonSignIn = document.querySelector('.btn-primary-signIn')
 
         showHide.addEventListener("click", function () {
@@ -81,9 +87,17 @@
         });
 
 
-                buttonSignIn.addEventListener('click', function () {
-                        window.location.href = 'index.html';
-                    });
+        formLogin.addEventListener('submit', function () {
+
+            if (event.target.userName.value == "user" && event.target.email.value == "user@email.com" && event.target.password.value == "12345678") {
+                window.location.href = 'index.html';
+            } else {
+                alert('login gagal!')
+            }
+
+            event.preventDefault();
+        });
+
     </script>
 </body>
 

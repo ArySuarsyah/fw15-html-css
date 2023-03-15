@@ -312,7 +312,7 @@ input::placeholder {
     border-radius: 16px;
     border: 0;
     margin: .5em 0;
-    background: #ADCCC7;
+    background: #5ea196;
     font-style: normal;
     font-weight: 700;
     font-size: 1em;
@@ -325,11 +325,11 @@ input::placeholder {
 }
 
 .btn-primary-signIn:hover {
-    background: #779f98;
+    background: #377065;
 }
 
 .btn-primary-signIn:active {
-    background: #49706a;
+    background: #25584e;
 }
 
 .logo-footer-signIn {
@@ -636,6 +636,7 @@ input::placeholder {
 
 .header-navbar a {
     text-decoration: none;
+    color: #373A42;
 }
 
 .header-navbar a:hover {
