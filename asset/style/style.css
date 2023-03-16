@@ -656,11 +656,17 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.login-signUp a {
+.login-signUp a:nth-child(1) {
     text-decoration: none;
+    color: #373A42;
 }
 
-.login-signUp button {
+.btn-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dedede;
+    text-decoration: none;
     height: 2.5em;
     width: 12em;
     border-radius: 5px;
@@ -670,11 +676,11 @@ input::placeholder {
     color: #F7F7FC;
 }
 
-.login-signUp button:hover {
+.btn-header:hover {
     background: #779f98;
 }
 
-.login-signUp button:active {
+.btn-header:active {
     background: #49706a;
 }
 

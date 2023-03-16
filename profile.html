@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="body">
     <header class="header-home font-poppins">
         <div class="brand-logo-header">
             <img src="/asset/image-icon/Fill 1.png" alt="" />
@@ -68,7 +68,31 @@
             </nav>
         </div>
     </header>
+
     <main class="overflow-visible w-full font-['Poppins'] bg-[#ADCCC7] md:p-[5em] md:bg-[#f6f3f3] text-[#373A42]">
+
+
+
+        <!-- edit profile form -->
+
+
+        <!-- <div
+            class="fixed border-[1px] top-0 right-0 bottom-0 left-0 flex justify-center items-center z-10 bg-black/[.2]"
+            id="edit-userName-container"
+            >
+            <div class="w-80 h-80 flex flex-col bg-[#dedede] justify-center items-center gap-5 rounded-[12px] lg:w-96 lg:h-96">
+                <span>Change username</span>
+                <input type="text" class="rounded-[12px] h-10 outline-0 p-5 w-72" id="edit-userName-input">
+                <button
+                    class="w-32 h-9 rounded-[12px] text-white bg-[#5ea196] hover:bg-[#377065] active:bg-[#25584e]"
+                    id="save-userName"
+                    >
+                    Save
+                    </button>
+            </div>
+        </div> -->
+
+
         <div class="md:flex md:justify-evenly">
             <section class="hidden bg-white px-[2em] py-[5em] rounded-t-[40px] md:block md:w-[20em] md:bg-[#f6f3f3]">
                 <div class="flex flex-col md:flex-row gap-[2em] items-center">
@@ -145,22 +169,22 @@
                         <div class="flex flex-col gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
                             <span>Usesrname</span>
                             <div class="flex gap-5">
-                                <span>@jhont0</span>
-                                <span>Edit</span>
+                                <span class="userName-value">@jhont0</span>
+                                <span class="userName-edit">Edit</span>
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
                             <span>Email</span>
                             <div class="flex gap-5">
-                                <span>jhont0@mail.com</span>
-                                <span>Edit</span>
+                                <span class="userName-value">jhont0@mail.com</span>
+                                <span class="Email-edit">Edit</span>
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
                             <span>Phone Number</span>
                             <div class="flex gap-5">
-                                <span>081234567890</span>
-                                <span>Edit</span>
+                                <span class="phone-value">081234567890</span>
+                                <span class="phone-edit">Edit</span>
                             </div>
                         </div>
                         <div class="flex flex-col gap-4 md:grid md:grid-cols-[40%_minmax(5%,_1fr)]">
@@ -277,6 +301,22 @@
     </footer>
     <script>
         feather.replace()
+
+        // const body = document.querySelector('.body')
+        // const editUserName = document.querySelector('#edit-userName-input');
+        // const editUserNameContainer = document.querySelector('#edit-userName-container');
+        // const saveUsername = document.querySelector('#save-userName').addEventListener('click', function(){
+
+        // })
+        // const userName = document.querySelector('.userName-edit')
+        //     .addEventListener('click', function () {
+        //         if (body.classList !== 'body overflow-hidden') {
+        //             body.classList.add('overflow-hidden')
+        //             console.log(typeof (body.classList));
+        //         } else {
+        //             body.classList = 'body';
+        //         }
+        //     })
     </script>
 </body>
 
