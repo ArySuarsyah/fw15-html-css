@@ -42,6 +42,11 @@ main {
     left: 180px;
 }
 
+/* .box-hero-signUp {
+    position: relative;
+} */
+
+
 .side-signUp {
     flex: 1;
     padding: 1.5em 5em;
@@ -220,6 +225,15 @@ input::placeholder {
     left: 180px;
 }
 
+.gradient-signIn-1 {
+background: rgb(222, 245, 229);
+    background: linear-gradient(0deg, rgba(222, 245, 229, 1) 10%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    width: 310px;
+    height: 250px;
+    left: 170px;
+}
+
 .side-signIn {
     flex: 1;
     padding: 1.5em 5em;
@@ -251,7 +265,7 @@ input::placeholder {
 }
 
 .form-wrap-signIn {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 38px;
@@ -969,7 +983,6 @@ input::placeholder {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 5fr));
     /* gap: 1em; */
-    border: 1px solid black;
 }
 
 .location-grid h1 {
@@ -1896,9 +1909,9 @@ footer {
         width: 90vw;
     }
 
-.accept input {
-    width: auto;
-}
+    .accept input {
+        width: auto;
+    }
 
 
 
