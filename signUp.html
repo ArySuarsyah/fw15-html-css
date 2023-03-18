@@ -15,11 +15,13 @@
 
 <body>
     <div class="container-signUp">
-        <section class="hero-container-signIn">
-            <img src="/asset/image-icon/face1.png" alt="face-1">
-            <img src="/asset//image-icon/face2.png" alt="face-2">
-            <div class="gradient-signIn-1"></div>
-            <div class="gradient-signIn-2"></div>
+        <section class="hero-container-forgot">
+            <div class="hero-image-forgot">
+                <img src="/asset/image-icon/face1.png" alt="face-1">
+                <img src="/asset//image-icon/face2.png" alt="face-2">
+                <div class="box-gradient-forgot-2"></div>
+                <div class="box-gradient-forgot-1"></div>
+            </div>
         </section>
         <section class="side-signUp">
             <div class="header-side-brand">
@@ -39,14 +41,18 @@
             <form class="form-wrap-signUp" action="" method="post">
                 <input type="text" name="full-name" id="full-name" placeholder="Full Name" minlength="2" required>
                 <input type="email" name="email" id="email" placeholder="Email" minlength="2" required>
+                <div class="password-input-wrap">
                 <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password"
-                    minlength="8" required>
-                <div class="show-hide-signUp1">
+                    <div class="show-hide-signUp1">
                     <i class="eyeIconPassword" data-feather="eye"></i>
+                    </div>
                 </div>
-                <div class="show-hide-signUp2">
-                    <i class="eyeIconConfirm" data-feather="eye-off"></i>
+                <div class="password-input-wrap">
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password"
+                        minlength="8" required>
+                    <div class="show-hide-signUp2">
+                        <i class="eyeIconConfirm" data-feather="eye-off"></i>
+                    </div>
                 </div>
                 <div class="accept">
                     <input type="checkbox" name="acceptCheckbox" id="acceptCheckbox" disabled>
