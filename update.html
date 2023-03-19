@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Wishlist</title>
+    <title>My Booking</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -64,6 +64,49 @@
         </div>
     </header>
     <main class="overflow-visible w-full font-['Poppins'] bg-[#ADCCC7] md:p-[5em] md:bg-[#f6f3f3] text-[#373A42]">
+        <section class="fixed bg-black/[.4] inset-0 z-10 flex justify-center items-center">
+            <section class="bg-white w-[65vw] h-[90vh] text-sm rounded-[30px] px-16 py-5 flex flex-col gap-5">
+                <span class="font-semibold">
+                    Create Event
+                </span>
+                <form class="grid grid-cols-2 gap-4" action="">
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="name">Name</label>
+                        <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
+                            placeholder="Input Name Event ...">
+                    </div>
+                </form>
+                <label for="detail">Detail</label>
+                <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-full h-20 p-5" type="text"
+                    placeholder="Input Name Event ...">
+                    <button class="text-white h-12 md:h-[50px] md:w-[250px] rounded-[15px] bg-[#5ea196] self-end">Save</button>
+            </section>
+        </section>
         <section class="md:flex md:flex-cols-2 lg:gap-[3em] justify-between">
             <aside class="hidden md:block md:w-[25em]">
                 <div class="flex gap-[2em] items-center">
@@ -112,7 +155,7 @@
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/wishlist.png" alt="profile">
-                        <a href="./wishlist.html">My Wishlist</a>
+                        <span>My Wishlist</span>
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/settings.png" alt="profile">
@@ -120,7 +163,7 @@
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/logout.png" alt="profile">
-                        <a href="./signIn.html">Logout</a>
+                        <span>Logout</span>
                     </div>
                 </div>
             </aside>
@@ -129,13 +172,23 @@
                     class="text-[#373A42] pb-[1em] md:text-[#373A42] w-[80%] md:w-[100%] flex gap-[10%] text-[20px] font-semibold mb-[1em] top-10 left-22">
                     <div class="flex flex-row justify-between w-[150%]">
                         <span>
-                            My Wishlist
+                            Manage Event
                         </span>
+                        <div class="month-manageEvent">
+                            <span>
+                                Create
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col gap-[2em] mt-10 text-[#373A42]">
+                <div class="month-manageEvent-sm">
+                    <span>
+                        Create
+                    </span>
+                </div>
+                <article class="flex flex-col gap-[2em] mt-10 text-[#373A42]">
                     <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5 relative">
+                        <div class="flex gap-5">
                             <div>
                                 <div
                                     class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
@@ -148,20 +201,30 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span
-                                        class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <i class="text-[#5ea196] absolute left-3 bottom-3 lg:bottom-auto lg:top-0 lg:left-auto lg:right-0" data-feather="heart"></i>
                         </div>
                         <hr>
                     </div>
                     <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5 relative">
+                        <div class="flex gap-5">
                             <div>
-                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
+                                <div
+                                    class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
                                     <span class="text-sm font-semibold text-[#5ea196]">15</span>
                                     <span class="text-xs text-[#C1C5D0]">Wed</span>
                                 </div>
@@ -171,20 +234,30 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <i class="text-[#5ea196] absolute left-3 bottom-3 lg:bottom-auto lg:top-0 lg:left-auto lg:right-0"
-                                data-feather="heart"></i>
                         </div>
                         <hr>
                     </div>
                     <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5 relative">
+                        <div class="flex gap-5">
                             <div>
-                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
+                                <div
+                                    class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
                                     <span class="text-sm font-semibold text-[#5ea196]">15</span>
                                     <span class="text-xs text-[#C1C5D0]">Wed</span>
                                 </div>
@@ -194,63 +267,26 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <i class="text-[#5ea196] absolute left-3 bottom-3 lg:bottom-auto lg:top-0 lg:left-auto lg:right-0"
-                                data-feather="heart"></i>
                         </div>
                         <hr>
                     </div>
-                    <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5 relative">
-                            <div>
-                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
-                                    <span class="text-sm font-semibold text-[#5ea196]">15</span>
-                                    <span class="text-xs text-[#C1C5D0]">Wed</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-5">
-                                <h1 class="text-2xl font-semibold">Sights & Sounds Exhibition</h1>
-                                <div class="flex flex-col text-xs gap-2">
-                                    <span>Jakarta, Indonesia</span>
-                                    <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
-                                </div>
-                            </div>
-                            <i class="text-[#5ea196] absolute left-3 bottom-3 lg:bottom-auto lg:top-0 lg:left-auto lg:right-0"
-                                data-feather="heart"></i>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5 relative">
-                            <div>
-                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
-                                    <span class="text-sm font-semibold text-[#5ea196]">15</span>
-                                    <span class="text-xs text-[#C1C5D0]">Wed</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-5">
-                                <h1 class="text-2xl font-semibold">Sights & Sounds Exhibition</h1>
-                                <div class="flex flex-col text-xs gap-2">
-                                    <span>Jakarta, Indonesia</span>
-                                    <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
-                                </div>
-                            </div>
-                            <i class="text-[#5ea196] absolute left-3 bottom-3 lg:bottom-auto lg:top-0 lg:left-auto lg:right-0"
-                                data-feather="heart"></i>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
+                </article>
             </aside>
         </section>
     </main>

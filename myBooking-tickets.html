@@ -79,24 +79,25 @@
                         <img src="/asset/image-icon/profile.png" alt="profile">
                         <span>Profile</span>
                     </div>
-                    <div class="flex flex-col gap-[2em] px-[2.5em] mt-[1em]">
-                        <div class="flex gap-[2em]">
-                            <img src="/asset/image-icon/card2.png" alt="card">
+                    <div class="flex flex-col gap-[2em] px-[2.5em] mt-[1em] relative">
+                        <div class="flex gap-[2em] items-center">
+                            <i class="w-5" data-feather="credit-card"></i>
                             <div>
-                                Card
+                                <span>Card</span>
                             </div>
+                            <hr class="hidden bg-black w-24 h-[2px] absolute top-3 left-7 md:block">
                         </div>
-                        <div class="flex gap-[2em]">
-                            <img src="/asset/image-icon/edit.png" alt="card">
-                            <div>
+                        <div class="flex gap-[2em] items-center text-[#5ea196]">
+                            <i class="w-5" data-feather="edit-3"></i>
+                            <a href="./profile.html">
                                 Edit Profile
-                            </div>
+                            </a>
                         </div>
-                        <div class="flex gap-[2em]">
-                            <img src="/asset/image-icon/pswd.png" alt="card">
-                            <div>
+                        <div class="flex items-center gap-[2em]">
+                            <i class="w-5" data-feather="unlock"></i>
+                            <a href="./changePassword.html">
                                 Change Password
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -119,7 +120,7 @@
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/logout.png" alt="profile">
-                        <span>Logout</span>
+                        <a href="./signIn.html">Logout</a>
                     </div>
                 </div>
             </aside>

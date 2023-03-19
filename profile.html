@@ -92,50 +92,50 @@
 
 
         <section class="md:flex md:justify-evenly">
-            <aside class="hidden bg-white px-[2em] py-[5em] rounded-t-[40px] md:block md:w-[20em] md:bg-[#f6f3f3]">
-                <div class="flex flex-col md:flex-row gap-[2em] items-center">
-                    <img class="rounded-full border-[2px] border-[#ADCCC7] w-[137px] md:w-[44px] md:h-[44px]"
-                        src="/asset/image-icon/luffy.jpeg" alt="profile-image" />
-                    <div class="flex flex-col items-center">
-                        <span class="text-[20px] md:text-[14px] font-semibold"> Jhon Tomson </span>
+            <aside class="hidden md:block md:w-[25em]">
+                <div class="flex gap-[2em] items-center">
+                    <img class="rounded-full border-[2px] border-[#ADCCC7] w-[44px] h-[44px]" src="/asset/image-icon/luffy.jpeg"
+                        alt="profile-image" />
+                    <div class="flex flex-col">
+                        <span class="text-[14px] font-semibold"> Jhon Tomson </span>
                         <span class="text-[12px] text-[#373A42BF]"> Entrepreneur, ID </span>
                     </div>
                 </div>
-                <div class="my-[2em] text-[13px] font-semibold">
+                <div class="my-[2em] text-[14px] font-semibold">
                     <div class="flex gap-[1em] text-[14px] font-semibold">
                         <img src="/asset/image-icon/profile.png" alt="profile">
                         <span>Profile</span>
                     </div>
                     <div class="flex flex-col gap-[2em] px-[2.5em] mt-[1em] relative">
-                        <div class="flex gap-[2em]">
-                            <img src="/asset/image-icon/card2.png" alt="card">
+                        <div class="flex gap-[2em] items-center">
+                            <i class="w-5" data-feather="credit-card"></i>
                             <div>
                                 <span>Card</span>
                             </div>
-                            <hr class="hidden bg-black w-24 h-[2px] absolute top-2 left-6 md:block">
+                            <hr class="hidden bg-black w-24 h-[2px] absolute top-3 left-7 md:block">
                         </div>
-                        <div class="flex gap-[2em]">
-                            <img src="/asset/image-icon/edit.png" alt="card">
-                            <div>
+                        <div class="flex gap-[2em] items-center text-[#5ea196]">
+                            <i class="w-5" data-feather="edit-3"></i>
+                            <a href="./profile.html">
                                 Edit Profile
-                            </div>
+                            </a>
                         </div>
                         <div class="flex items-center gap-[2em]">
-                            <img class="md:w-4 md:h-5" src="/asset/image-icon/pswd.png" alt="card">
-                            <div>
+                            <i class="w-5" data-feather="unlock"></i>
+                            <a href="./changePassword.html">
                                 Change Password
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col gap-[2em] text-[14px] font-semibold">
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/booking.png" alt="profile">
-                        <span>My Booking</span>
+                        <a href="./myBooking.html">My Booking</a>
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/wishlist.png" alt="profile">
-                        <span>My Wishlist</span>
+                        <a href="./wishlist.html">My Wishlist</a>
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/settings.png" alt="profile">
@@ -143,19 +143,17 @@
                     </div>
                     <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/logout.png" alt="profile">
-                        <span>Logout</span>
+                        <a href="./signIn.html">Logout</a>
                     </div>
                 </div>
             </aside>
             <aside
-                class="pt-[15em] px-[2em] md:pt-[3em] pb-10 md:rounded-t-[40px] bg-white md:rounded-[15px] relative">
-                <div
-                    class="text-[#dedede] md:text-[#373A42] w-[80%] md:w-[100%] flex gap-[10%] text-[20px] font-semibold mb-[1em] absolute top-10 left-22 md:static lg:static">
-                    <div class="text-[#373A42] flex flex-row justify-between w-[150%]">
+                class="pt-[15em] px-[2em] md:pt-[3em] pb-10 md:rounded-t-[40px] bg-white md:rounded-[15px] lg:rounded-[15px] lg:pt-[2em] relative">
+                <div class="text-[#373A42] pb-[2em] w-[80%] flex gap-[10%] text-[20px] font-semibold mb-[1em] md:static lg:static">
+                    
                         <span>
                             Profile
                         </span>
-                    </div>
                 </div>
                 <form class="grid gap-5 bg-white md:gap-10 lg:grid-cols-2 text-[14px]">
                     <div class="flex flex-col gap-8 md:gap-10">
@@ -299,6 +297,10 @@
     </footer>
     <script>
         feather.replace()
+
+
+
+        
 
         // const body = document.querySelector('.body')
         // const editUserName = document.querySelector('#edit-userName-input');
