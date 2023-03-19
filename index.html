@@ -64,7 +64,7 @@
             </nav>
         </div>
     </header>
-    <div class="container">
+    <main class="container">
         <section class="hero-home">
             <div class="face1-image">
                 <img src="/asset/image-icon/face1.png" alt="face-1">
@@ -363,9 +363,13 @@
             </div>
             <span class="copyright">© 2020 Wetick All Rights Reserved</span>
         </footer>
-    </div>
+    </main>
     <script>
         feather.replace()
+
+        const event = document.querySelector('.event').addEventListener('click', function(){
+            window.location.href = 'event.html'
+        })
     </script>
 </body>
 

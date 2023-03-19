@@ -64,8 +64,8 @@
         </div>
     </header>
     <main class="overflow-visible w-full font-['Poppins'] bg-[#ADCCC7] md:p-[5em] md:bg-[#f6f3f3] text-[#373A42]">
-        <div class="md:flex md:flex-cols-2 lg:gap-[3em] justify-between">
-            <section class="hidden md:block md:w-[25em]">
+        <section class="md:flex md:flex-cols-2 lg:gap-[3em] justify-between">
+            <aside class="hidden md:block md:w-[25em]">
                 <div class="flex gap-[2em] items-center">
                     <img class="rounded-full border-[2px] border-[#ADCCC7] w-[44px] h-[44px]"
                         src="/asset/image-icon/luffy.jpeg" alt="profile-image" />
@@ -102,6 +102,10 @@
                 </div>
                 <div class="flex flex-col gap-[2em] text-[14px] font-semibold">
                     <div class="flex gap-[1em]">
+                        <img src="/asset/image-icon/createEvent.png" alt="profile">
+                        <a href="./manageEvent.html">Create Event</a>
+                    </div>
+                    <div class="flex gap-[1em]">
                         <img src="/asset/image-icon/booking.png" alt="profile">
                         <span>My Booking</span>
                     </div>
@@ -118,23 +122,27 @@
                         <span>Logout</span>
                     </div>
                 </div>
-            </section>
-            <section class="p-[2em] pb-10 md:w-[30em] lg:w-[50em] bg-white md:rounded-[15px]">
+            </aside>
+            <aside class="p-[2em] pb-10 md:w-[30em] lg:w-[50em] bg-white md:rounded-[15px]">
                 <div
                     class="text-[#373A42] pb-[1em] md:text-[#373A42] w-[80%] md:w-[100%] flex gap-[10%] text-[20px] font-semibold mb-[1em] top-10 left-22">
                     <div class="flex flex-row justify-between w-[150%]">
                         <span>
-                            My Booking
+                            Manage Event
                         </span>
-                        <div class="month-myBooking">
-                            Create
+                        <div class="month-manageEvent">
+                            <span>
+                                Create
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="month-myBooking-sm">
-                    <input type="month" name="month" id="" value="yyyy-mm">
+                <div class="month-manageEvent-sm">
+                    <span>
+                        Create
+                    </span>
                 </div>
-                <div class="flex flex-col gap-[2em] mt-10 text-[#373A42]">
+                <article class="flex flex-col gap-[2em] mt-10 text-[#373A42]">
                     <div class="flex flex-col gap-[2em]">
                         <div class="flex gap-5">
                             <div>
@@ -149,10 +157,20 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span
-                                        class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +179,7 @@
                     <div class="flex flex-col gap-[2em]">
                         <div class="flex gap-5">
                             <div>
-                                <div
-                                    class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
+                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
                                     <span class="text-sm font-semibold text-[#5ea196]">15</span>
                                     <span class="text-xs text-[#C1C5D0]">Wed</span>
                                 </div>
@@ -172,10 +189,20 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span
-                                        class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -184,8 +211,7 @@
                     <div class="flex flex-col gap-[2em]">
                         <div class="flex gap-5">
                             <div>
-                                <div
-                                    class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
+                                <div class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
                                     <span class="text-sm font-semibold text-[#5ea196]">15</span>
                                     <span class="text-xs text-[#C1C5D0]">Wed</span>
                                 </div>
@@ -195,41 +221,28 @@
                                 <div class="flex flex-col text-xs gap-2">
                                     <span>Jakarta, Indonesia</span>
                                     <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span
-                                        class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
+                                    <div class="flex gap-3">
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Detail
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Update
+                                        </span>
+                                        <span
+                                            class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10 cursor-pointer">
+                                            Delete
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr>
                     </div>
-                    <div class="flex flex-col gap-[2em]">
-                        <div class="flex gap-5">
-                            <div>
-                                <div
-                                    class="flex flex-col items-center justify-center p-[5px] w-12 h-20 rounded-2xl shadow-2xl">
-                                    <span class="text-sm font-semibold text-[#5ea196]">15</span>
-                                    <span class="text-xs text-[#C1C5D0]">Wed</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-5">
-                                <h1 class="text-2xl font-semibold">Sights & Sounds Exhibition</h1>
-                                <div class="flex flex-col text-xs gap-2">
-                                    <span>Jakarta, Indonesia</span>
-                                    <span>Wed, 15 Nov, 4:00 PM</span>
-                                    <span
-                                        class="text-[#5ea196] font-medium cursor-pointer hover:text-[#44786f] active:text-[#295951] w-10">
-                                        Detail
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </article>
+            </aside>
+        </section>
     </main>
     <footer>
         <div class="footer">
