@@ -616,6 +616,13 @@ input::placeholder {
     overflow-x: hidden;
 }
 
+.container-home-page {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f3f3;
+    overflow-x: hidden;
+}
+
+
 .header-home {
     font-family: 'Poppins', sans-serif;
     padding: 0 3em;
@@ -1338,6 +1345,7 @@ footer {
 
 
 .event-image-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 3em;
@@ -1352,6 +1360,11 @@ footer {
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
 }
+
+.event-decript-evnt-page-sm {
+    display: none;
+}
+
 
 .event-image-gradient {
     position: absolute;
@@ -2228,11 +2241,17 @@ footer {
         display: none;
     }
 
-    .event-decript-evnt-page-wrap {
+    .event-decript-evnt-page-sm {
         position: absolute;
+        display: block;
+        z-index: 1;
         top: 8em;
         left: 2em;
         color: #dedede;
+    }
+
+    .event-decript-evnt-page-wrap {
+        display: none;
     }
 
     .country-time-event-page {
@@ -2249,7 +2268,7 @@ footer {
     }
 
     .buy-tickets {
-        margin: auto;
+        /* margin: auto; */
     }
 
 
@@ -2372,16 +2391,16 @@ footer {
     }
 
 
-/* manage event */
+    /* manage event */
 
 
-        .month-manageEvent {
-            display: none;
-        }
-    
-        .month-manageEvent-sm {
-            display: block;
-        }
+    .month-manageEvent {
+        display: none;
+    }
+
+    .month-manageEvent-sm {
+        display: block;
+    }
 
 
 }
@@ -2551,6 +2570,10 @@ footer {
 
 
 
+
+
+
+    /* event-page */
 
 
 
