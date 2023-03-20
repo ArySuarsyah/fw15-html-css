@@ -1,2 +1,2 @@
 # fw15-html-css
-Go To Page https://fw15-html-css.netlify.app/
+get started https://fw15-html-css.netlify.app/
