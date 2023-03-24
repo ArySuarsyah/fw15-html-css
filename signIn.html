@@ -7,8 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
 
-    <link rel="stylesheet" href="/asset/style/style.css">
+    <link rel="stylesheet" href="./asset/style/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -16,8 +22,8 @@
     <main class="container-signIn">
         <aside class="hero-container-forgot">
             <div class="hero-image-forgot">
-                <img src="/asset/image-icon/face1.png" alt="face-1">
-                <img src="/asset//image-icon/face2.png" alt="face-2">
+                <img src="asset/image-icon/face1.png" alt="face-1">
+                <img src="asset//image-icon/face2.png" alt="face-2">
                 <div class="box-gradient-forgot-2"></div>
                 <div class="box-gradient-forgot-1"></div>
             </div>
@@ -25,7 +31,7 @@
         <aside class="side-signIn">
             <div class="header-side-brand-signIn">
                 <div class="brand-logo-container-signIn">
-                    <img src="/asset/image-icon/Fill 1.png" alt="logo">
+                    <img src="asset/image-icon/Fill 1.png" alt="logo">
                     <span class="brand-name-signIn">
                         We<span>tick</span>
                     </span>
@@ -43,7 +49,7 @@
                 <div class="password-input-wrap">
                     <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
                     <div class="show-hide">
-                        <i class="eyeIcon" data-feather="eye"></i>
+                        <i class="fa fa-eye fa-lg" id="eyeIcon"></i>
                     </div>
                 </div>
                 <a href="/forgotPassword.html">Forgot Password?</a>
@@ -53,10 +59,10 @@
                 <span>or sign in with</span>
                 <div class="logo-footer-signIn">
                     <div class="google-logo-signIn">
-                        <img src="/asset/image-icon/google.png" alt="">
+                        <img src="asset/image-icon/google.png" alt="">
                     </div>
                     <div class="fb-logo-signIn">
-                        <img src="/asset/image-icon/fb-logo.png" alt="">
+                        <img src="asset/image-icon/fb-logo.png" alt="">
                     </div>
                 </div>
             </form>
@@ -72,7 +78,8 @@
 
         const showHide = document.querySelector(".show-hide");
         const passwordInput = document.querySelector("#password");
-        const eye = showHide.querySelector(".eyeIcon");
+        const eyeIcon = showHide.querySelector("#eyeIcon");
+        const eye = eyeIcon.classList;
 
         const userName = document.querySelector("#userName");
         const email = document.querySelector("#email");
@@ -85,10 +92,13 @@
         showHide.addEventListener("click", function () {
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                eye.setAttribute("data-feather", "eye-off");
+                console.log(eye);
+                eye.remove("fa-eye");
+                eye.add("fa-eye-slash")
             } else {
                 passwordInput.type = "password";
-                eye.setAttribute("data-feather", "eye");
+                eye.remove("fa-eye-slash")
+                eye.add("fa-eye");
             }
         });
 

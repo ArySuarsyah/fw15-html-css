@@ -7,9 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
 
-    <link rel="stylesheet" href="/asset/style/style.css">
+    <link rel="stylesheet" href="asset/style/style.css">
 
+    <!-- Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -17,8 +23,8 @@
     <main class="container-signUp">
         <aside class="hero-container-forgot">
             <div class="hero-image-forgot">
-                <img src="/asset/image-icon/face1.png" alt="face-1">
-                <img src="/asset//image-icon/face2.png" alt="face-2">
+                <img src="asset/image-icon/face1.png" alt="face-1">
+                <img src="asset//image-icon/face2.png" alt="face-2">
                 <div class="box-gradient-forgot-2"></div>
                 <div class="box-gradient-forgot-1"></div>
             </div>
@@ -26,7 +32,7 @@
         <aside class="side-signUp">
             <div class="header-side-brand">
                 <div class="brand-logo-container">
-                    <img src="/asset/image-icon/Fill 1.png" alt="logo">
+                    <img src="asset/image-icon/Fill 1.png" alt="logo">
                     <span class="brand-name">
                         We<span>tick</span>
                     </span>
@@ -35,23 +41,24 @@
             <div class="header-side-title">
                 <h3>Sign Up</h3>
                 <span>
-                    Already have an account? <a href="/signIn.html">Log In</a>
+                    Already have an account? <a href="signIn.html">Log In</a>
                 </span>
             </div>
             <form class="form-wrap-signUp" action="" method="post">
                 <input type="text" name="full-name" id="full-name" placeholder="Full Name" minlength="2" required>
                 <input type="email" name="email" id="email" placeholder="Email" minlength="2" required>
                 <div class="password-input-wrap">
-                <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
+                    <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
                     <div class="show-hide-signUp1">
-                    <i class="eyeIconPassword" data-feather="eye"></i>
+                        <i class="fa fa-eye fa-lg" id="eyeIconPassword"></i>
+
                     </div>
                 </div>
                 <div class="password-input-wrap">
                     <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password"
                         minlength="8" required>
                     <div class="show-hide-signUp2">
-                        <i class="eyeIconConfirm" data-feather="eye-off"></i>
+                        <i class="fa fa-eye fa-lg" id="eyeIconConfirm"></i>
                     </div>
                 </div>
                 <div class="accept">
@@ -77,8 +84,11 @@
         const passwordInput = document.querySelector("#password");
         const confirmPasswordInput = document.querySelector("#confirm-password");
 
-        const eyeIconPassword = document.querySelector(".eyeIconPassword");
-        const eyeIconConfirm = document.querySelector(".eyeIconConfirm");
+        const eyeIconPassword = document.querySelector("#eyeIconPassword");
+        const eyeIconConfirm = document.querySelector("#eyeIconConfirm");
+        const eyePassword = eyeIconPassword.classList;
+        const eyeConfirm = eyeIconConfirm.classList;
+
 
         const fullName = document.querySelector('#full-name');
         const email = document.querySelector('#email');
@@ -92,10 +102,12 @@
         showHidePassword.addEventListener("click", function () {
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                eyeIconPassword.setAttribute("data-feather", "eye-off");
+                eyePassword.remove("fa-eye")
+                eyePassword.add("fa-eye-slash")
             } else {
                 passwordInput.type = "password";
-                eyeIconPassword.setAttribute("data-feather", "eye");
+                eyePassword.remove("fa-eye-slash")
+                eyePassword.add("fa-eye")
             }
         });
 
@@ -104,10 +116,14 @@
         showHideConfirm.addEventListener("click", function () {
             if (confirmPasswordInput.type === "password") {
                 confirmPasswordInput.type = "text";
-                eyeIconConfirm.setAttribute("data-feather", "eye-off");
+                eyeConfirm.remove("fa-eye")
+                eyeConfirm.add("fa-eye-slash")
+
             } else {
                 confirmPasswordInput.type = "password";
-                eyeIconConfirm.setAttribute("data-feather", "eye");
+
+                eyeConfirm.remove("fa-eye-slash")
+                eyeConfirm.add("fa-eye")
             }
         });
 
@@ -115,7 +131,7 @@
         // form validation
 
         const inputForm = function () {
-            if (fullName.value.length >= 2 && email.value !== "" && email.value.includes('@') && passwordInput.value !== "" && confirmPasswordInput.value == passwordInput.value) {
+            if (fullName.value.length >= 2 && email.value !== "" && email.value.includes('@') && passwordInput.value.length == 8 && confirmPasswordInput.value == passwordInput.value) {
                 checkbox.disabled = false;
             } else {
                 checkbox.disabled = true;
