@@ -1235,7 +1235,6 @@ input::placeholder {
 }
 
 .partner-list {
-    border: 1px solid black;
     width: 70%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
