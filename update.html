@@ -64,12 +64,12 @@
         </div>
     </header>
     <main class="overflow-visible w-full font-['Poppins'] bg-[#ADCCC7] md:p-[5em] md:bg-[#f6f3f3] text-[#373A42]">
-        <section class="fixed bg-black/[.4] inset-0 z-10 flex justify-center items-center">
+        <section class="fixed bg-black/[.4] inset-0 z-10 flex justify-center items-center bg-black">
             <section class="bg-white w-[65vw] h-[90vh] text-sm rounded-[30px] px-16 py-5 flex flex-col gap-5">
                 <span class="font-semibold">
                     Create Event
                 </span>
-                <form class="grid grid-cols-2 gap-4" action="">
+                <form class="grid grid-cols-2 gap-4" action="" id="formModals">
                     <div class="flex flex-col gap-2">
                         <label for="name">Name</label>
                         <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-[350px] h-14 p-5" type="text"
@@ -101,10 +101,13 @@
                             placeholder="Input Name Event ...">
                     </div>
                 </form>
-                <label for="detail">Detail</label>
-                <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-full h-20 p-5" type="text"
-                    placeholder="Input Name Event ...">
-                    <button class="text-white h-12 md:h-[50px] md:w-[250px] rounded-[15px] bg-[#5ea196] self-end">Save</button>
+                <div class="flex flex-col gap-2">
+                    <label for="detail">Detail</label>
+                    <input class="border-[1px] border-[#C1C5D0] rounded-2xl w-full h-20 p-5" type="text"
+                        placeholder="Input Name Event ...">
+                </div>
+                    <button
+                        class="text-white h-12 md:h-[50px] md:w-[250px] rounded-[15px] bg-[#5ea196] self-end">Save</button>
             </section>
         </section>
         <section class="md:flex md:flex-cols-2 lg:gap-[3em] justify-between">
