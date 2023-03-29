@@ -103,16 +103,46 @@
         });
 
 
+
+        const sideSignIn = document.querySelector('.side-signIn');
+        const alertBox = document.createElement('div');
+        const alertMessage = document.createElement('span');
+        const alertClose = document.createElement('span');
+
+
         formLogin.addEventListener('submit', function () {
 
+
             if (event.target.userName.value == "user" && event.target.email.value == "user@email.com" && event.target.password.value == "12345678") {
-                window.location.href = 'index.html';
+                alertMessage.innerText = 'Login Success';
+                alertBox.appendChild(alertMessage);
+                alertBox.appendChild(alertClose);
+                sideSignIn.appendChild(alertBox);
+
+                alertBox.className = 'alertSignIn-success';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 3000)
             } else {
-                alert('login gagal!')
+
+                alertClose.innerText = 'x'
+                alertMessage.innerText = 'Incorrect email or password. Please try again.';
+
+
+                alertClose.className = 'alertClose'
+                alertBox.className = 'alertSignIn';
+
+                alertBox.appendChild(alertMessage);
+                alertBox.appendChild(alertClose);
+                sideSignIn.appendChild(alertBox);
             }
 
             event.preventDefault();
         });
+
+        alertClose.addEventListener('click', function () {
+            alertBox.className = 'alertSignIn-hidden'
+        })
 
     </script>
 </body>

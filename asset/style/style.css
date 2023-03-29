@@ -241,6 +241,7 @@ input::placeholder {
 }
 
 .side-signIn {
+    position: relative;
     flex: 1;
     padding: 1.5em 5em;
 }
@@ -388,6 +389,68 @@ input::placeholder {
 .fb-logo-signIn:active {
     background-color: #779f98;
 }
+
+
+
+.alertSignIn-hidden {
+    display: none;
+}
+
+.alertSignIn {
+    animation: slide-alert 1.5s  forwards;
+    position: absolute;
+    background-color: #fe000061;
+    font-size: large;
+    color: #ffffff;
+    top: -10rem;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    -webkit-animation: slide-alert 1.5s  forwards;
+}
+
+.alertClose {
+    position: absolute;
+    display: flex;
+    justify-content: center;    
+    border-radius: 50%;
+    top: 4px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    /* background-color: #dedede; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.alertClose:hover {
+    color: red;
+}
+
+
+
+
+.alertSignIn-success {
+    animation: slide-alert 1.5s 2 alternate;
+    position: absolute;
+    background-color: #00ff0461;
+    font-size: large;
+    color: #ffffff;
+    top: -10rem;
+    width: 70%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    -webkit-animation: slide-alert 1.5s 2 alternate;
+}
+
 
 
 
@@ -1875,6 +1938,7 @@ footer {
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
 }
+
 /* text-white h-12 md:h-[50px] md:w-[250px] rounded-[15px] bg-[#5ea196] self-end */
 
 .btn-modals-classList {
@@ -1986,9 +2050,9 @@ footer {
         -o-transform: scaleY(0);
     }
 
-    .navbar-container-sm:hover nav {
+    .navbar-toggle {
         animation: slide-in-drop .5s forwards;
-        -webkit-animation: slide-in-drop .5s forwards;
+        -webkit-animation: slide-in-drop .5s both;
     }
 
     .navbar-container-sm a {
@@ -2711,3 +2775,23 @@ footer {
         -o-transform: translateY(3em) scaleY(1);
     }
 }
+
+@keyframes slide-alert {
+    0% {
+        transform: translateY(-100%) scaleY(1);
+        -webkit-transform: translateY(-100%) scaleY(1);
+        -moz-transform: translateY(-100%) scaleY(1);
+        -ms-transform: translateY(-100%) scaleY(1);
+        -o-transform: translateY(-100%) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(125%) scaleY(1);
+        -webkit-transform: translateY(125%) scaleY(1);
+        -moz-transform: translateY(125%) scaleY(1);
+        -ms-transform: translateY(125%) scaleY(1);
+        -o-transform: translateY(125%) scaleY(1);
+    }
+}
+
+
