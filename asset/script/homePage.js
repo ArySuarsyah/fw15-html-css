@@ -78,5 +78,4 @@ data.forEach((el) => {
   eventList.addEventListener("click", function () {
       window.location.href = "event.html";
     });
-  console.log(el);
 });
