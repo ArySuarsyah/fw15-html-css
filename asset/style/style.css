@@ -932,18 +932,18 @@ input::placeholder {
     border-bottom-left-radius: 1em;
 }
 
-.event-decript div:first-child {
+.dateTimeEvent {
     font-size: .8em;
     color: #FCFDFE;
 }
 
-.event-decript div:nth-child(2) {
+.eventName {
     font-size: 1.2em;
     font-weight: 500;
     color: #FCFDFE;
 }
 
-.event img {
+.eventPict {
     width: 200px;
     height: 300px;
     border-radius: 1em;
@@ -953,7 +953,7 @@ input::placeholder {
     -o-border-radius: 1em;
 }
 
-.user-list-group img {
+.userList {
     width: 60px;
     height: 20px;
 }
