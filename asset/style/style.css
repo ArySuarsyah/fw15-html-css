@@ -2061,10 +2061,11 @@ footer {
     }
 
     .navbar-container-sm ul {
+        padding: 0;
         font-family: 600;
-        display: flex;
-        justify-content: start;
         flex-direction: column;
+        display: flex;
+        justify-content: center;
         /* gap: 3em; */
         list-style: none;
     }
