@@ -397,7 +397,7 @@ input::placeholder {
 }
 
 .alertSignIn {
-    animation: slide-alert 1.5s  forwards;
+    animation: slide-alert 1.5s forwards;
     position: absolute;
     background-color: #fe000061;
     font-size: large;
@@ -408,13 +408,13 @@ input::placeholder {
     justify-content: center;
     align-items: center;
     padding: 0 10px;
-    -webkit-animation: slide-alert 1.5s  forwards;
+    -webkit-animation: slide-alert 1.5s forwards;
 }
 
 .alertClose {
     position: absolute;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     border-radius: 50%;
     top: 4px;
     right: 10px;
@@ -2065,8 +2065,20 @@ footer {
         display: flex;
         justify-content: start;
         flex-direction: column;
-        gap: 3em;
+        /* gap: 3em; */
         list-style: none;
+    }
+
+    .navbar-toggle ul li {
+        padding: 2em;
+    }
+
+    .navbar-toggle ul li:hover {
+        background-color: #0849fcbb;
+    }
+
+    .navbar-toggle ul li:hover>a {
+        color: #ffffff6f;
     }
 
 
@@ -2793,5 +2805,3 @@ footer {
         -o-transform: translateY(125%) scaleY(1);
     }
 }
-
-
